@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp6
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            Person employee = new Employee();
+            employee.FirstName = "Sample";
+            employee.LastName = "Student";
+            employee.SayName();
+            Console.ReadLine();
+
+            IQuittable quittable = new Employee();
+            quittable.Quit();
         }
     }
 }
